@@ -3,7 +3,7 @@ import copy
 
 from mongoengine.base import BaseDocument
 import marshmallow as ma
-from marshmallow.compat import with_metaclass
+# from marshmallow.compat import with_metaclass
 from marshmallow_mongoengine.convert import ModelConverter
 
 
@@ -88,7 +88,7 @@ class SchemaMeta(ma.schema.SchemaMeta):
         return declared_fields
 
 
-class ModelSchema(with_metaclass(SchemaMeta, ma.Schema)):
+class ModelSchema(six.with_metaclass(SchemaMeta, ma.Schema)):
     """Base class for Mongoengine model-based Schemas.
 
     Example: ::
