@@ -2,6 +2,11 @@
 History
 =======
 
+0.10.1 (2020-04-30)
+-------------------
+ - Fixed compatibility issues with Marshmallow
+   Replaced marshmallow.compat.with_metaclass with six.with_metaclass
+
 0.10.0 (2017-11-06)
 -------------------
  - Add support for mongoengine.LazyReferenceField and mongoengine.GenericLazyReferenceField

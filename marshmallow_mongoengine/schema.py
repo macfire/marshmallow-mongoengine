@@ -5,6 +5,7 @@ from mongoengine.base import BaseDocument
 import marshmallow as ma
 # from marshmallow.compat import with_metaclass
 from marshmallow_mongoengine.convert import ModelConverter
+import six
 
 
 DEFAULT_SKIP_VALUES = (None, [], {})
