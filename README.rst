@@ -17,6 +17,10 @@ marshmallow-mongoengine
 
 See documentation at http://marshmallow-mongoengine.rtfd.org/
 
+install
+
+pip install git+https://github.com/macfire/marshmallow-mongoengine.git#egg=marshmallow_mongoengine
+
 Declare your models
 -------------------
 
