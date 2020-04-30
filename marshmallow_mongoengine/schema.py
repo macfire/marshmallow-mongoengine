@@ -104,7 +104,7 @@ class ModelSchema(six.with_metaclass(SchemaMeta, ma.Schema)):
     OPTIONS_CLASS = SchemaOpts
 
     @ma.post_dump
-    def _remove_skip_values(self, data):
+    def _remove_skip_values(self, data, **kwargs):
         to_skip = self.opts.model_skip_values
         return {
             key: value for key, value in data.items()
@@ -112,13 +112,13 @@ class ModelSchema(six.with_metaclass(SchemaMeta, ma.Schema)):
         }
 
     @ma.post_load
-    def _make_object(self, data):
+    def _make_object(self, data, **kwargs):
         if self.opts.model_build_obj and self.opts.model:
             return self.opts.model(**data)
         else:
             return data
 
-    def update(self, obj, data):
+    def update(self, obj, data, **kwargs):
         """Helper function to update an already existing document
     instead of creating a new one.
     :param obj: Mongoengine Document to update

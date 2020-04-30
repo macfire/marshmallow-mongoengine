@@ -2,7 +2,7 @@
 History
 =======
 
-0.10.1 (2020-04-30)
+0.10.2 (2020-04-30)
 -------------------
  - Fixed compatibility issues with Marshmallow
    Replaced marshmallow.compat.with_metaclass with six.with_metaclass
