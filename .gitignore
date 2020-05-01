@@ -56,3 +56,5 @@ docs/_build/
 
 # PyBuilder
 target/
+marshmallow_mongoengine/.DS_Store
+.DS_Store
